@@ -1,5 +1,6 @@
 import { useState, useContext } from 'react';
 import api from '../services/api';
+import '../App.css';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 import { Link } from 'react-router-dom';  // Import Link
@@ -23,8 +24,8 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
+    <div className="container">
+      <h2>Lumaa Login</h2>
       <form onSubmit={handleLogin}>
         <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} required />
         <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />

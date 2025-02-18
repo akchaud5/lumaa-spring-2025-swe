@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import api from '../services/api';
+import '../App.css';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';  // Import Link
 
@@ -20,7 +21,7 @@ const Register = () => {
   };
 
   return (
-    <div>
+    <div className="container">
       <h2>Register</h2>
       <form onSubmit={handleRegister}>
         <input

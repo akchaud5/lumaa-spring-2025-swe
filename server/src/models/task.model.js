@@ -1,7 +1,7 @@
 const { pool } = require('../config/db');
 
 const getTasks = async (userId) => {
-  const result = await pool.query('SELECT * FROM tasks WHERE user_id = $1', [userId]);
+  const result = await pool.query('SELECT * FROM tasks WHERE user_id = $1 order by id desc', [userId]);
   return result.rows;
 };
 
