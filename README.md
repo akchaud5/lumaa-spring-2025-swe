@@ -1,5 +1,5 @@
 # Full-Stack Coding Challenge
-   - Salary Expectations per month (Mandatory) : **4500$**
+   - Salary Expectations per month (Mandatory) : **2200$**
    - Video Link : **https://tinyurl.com/LumaaChallenge**
 ## Overview
 
