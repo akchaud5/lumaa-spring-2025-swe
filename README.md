@@ -1,65 +1,73 @@
-# Full-Stack Coding Challenge
-   - Salary Expectations per month (Mandatory) : **2200$**
-   - Video Link : **https://tinyurl.com/LumaaChallenge**
-## Overview
+# Task Management Application
 
-Create a “Task Management” application with **React + TypeScript** (frontend), **Node.js** (or **Nest.js**) (backend), and **PostgreSQL** (database). The application should:
+Full-stack task management application with React, TypeScript, Node.js, and PostgreSQL.
+
+## Setup Requirements
+
+- Node.js (v18+)
+- PostgreSQL (v14+)
+- npm/yarn
+
+## Installation
+
+1. Clone repository and install dependencies:
+```bash
+git clone <repository-url>
+cd task-management
+
+# Backend setup:
+
+     PORT=5000
+     DATABASE_URL=postgresql://postgres:password@localhost:5432/taskdb
+     DB_USER=postgres
+     DB_PASS=password
+     DB_HOST=localhost
+     DB_PORT=5432
+     DB_NAME=taskdb
+     JWT_SECRET=f8e6b2f75e0a3c7f3b52a9d48980e4b89bfa8cb118a2f7b5632f3f3d3ef6a2d8
 
 
-### 1. Backend (Node.js)
-  - Document any environment variables (e.g., database connection string, JWT secret)  
-     **.env file in server folder will have the required details for database connection string and JWT Secret**  
-    ```env
-         PORT=5000
-         DATABASE_URL=postgresql://postgres:password@localhost:5432/taskdb
-         DB_USER=postgres
-         DB_PASS=password
-         DB_HOST=localhost
-         DB_PORT=5432
-         DB_NAME=taskdb
-         JWT_SECRET=f8e6b2f75e0a3c7f3b52a9d48980e4b89bfa8cb118a2f7b5632f3f3d3ef6a2d8
+npm run dev
 
+# Frontend setup:
 
-### 2. Frontend (React + TypeScript)
+bashCopycd frontend
+npm install
+# Create .env file with:
+REACT_APP_API_URL=http://localhost:3001/api
 
-- **Login / Register**:
-  - If not authenticated, the user should not see the tasks page.
----
+npm start
 
-## Deliverables
-1. **Implement Your Solution** in the forked repository. Make sure you're README file has:
-   - Steps to set up the database.  
-     - **Install Postgres from https://www.postgresql.org/download/.**    
-     - **Open the pgAdmin Tool to create a database named taskdb**  
-     - **The creation of tables is taken care by the DB script so the setup for database is done**
-     
-   - How to run the backend.  
-     - **Install Node**    
-     - **npm install**  
-     - **npm run dev**  
-     - **This should start up the backend on port 3000**  
-     - **Backend Configuration is done**  
-     
-   - How to run the frontend.  
-   - **npm install**
-   - **npm run dev**
-   - **This should provide a link for the application** 
+# Database setup:
 
-## Evaluation Criteria
+sqlCopyCREATE DATABASE task_management;
+Tables will be created automatically on first run.
+API Endpoints
+Auth
 
-1. **Functionality**  
-   - Does registration and login work correctly (with password hashing)? **YES**
-   - Are tasks protected by authentication? **YES**
-   - Does the tasks CRUD flow work end-to-end? **YES**
+POST /api/auth/register - Register user
+POST /api/auth/login - Login user
 
-2. **Code Quality**  
-   - Is the code structured logically and typed in TypeScript? **YES**
-   - Are variable/function names descriptive? **YES**
+# Tasks (Protected)
 
-3. **Clarity**  
-   - Is the `README.md` (in your fork) clear and detailed about setup steps? **YES**
-   - Easy to run and test? **YES**
+GET /api/tasks - Get all tasks
+POST /api/tasks - Create task
+PUT /api/tasks/:id - Update task
+DELETE /api/tasks/:id - Delete task
 
-4. **Maintainability**  
-   - Organized logic (controllers/services, etc.) **YES**
-   - Minimal hard-coded values **No hard-coded values except JWT**
+# Features
+
+JWT authentication
+CRUD operations for tasks
+PostgreSQL database
+React frontend with TypeScript
+Protected routes
+Password hashing with bcrypt
+
+# Security
+
+Password hashing
+JWT authentication
+Protected API routes
+Input validation
+CORS enabled
