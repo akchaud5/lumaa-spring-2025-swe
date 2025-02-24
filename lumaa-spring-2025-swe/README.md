@@ -1,11 +1,22 @@
-# Full-Stack Coding Challenge
-   - Salary Expectations per month (Mandatory) : **2200$**
-   - Video Link : **https://tinyurl.com/LumaaChallenge**
+
 ## Overview
 
-Create a “Task Management” application with **React + TypeScript** (frontend), **Node.js** (or **Nest.js**) (backend), and **PostgreSQL** (database). The application should:
+# Task Management Application
 
+Full-stack task management application with React, TypeScript, Node.js, and PostgreSQL.
 
+## Setup Requirements
+
+- Node.js (v18+)
+- PostgreSQL (v14+)
+- npm/yarn
+
+## Installation
+
+1. Clone repository and install dependencies:
+```bash
+git clone <repository-url>
+cd task-management
 ### 1. Backend (Node.js)
   - Document any environment variables (e.g., database connection string, JWT secret)  
      **.env file in server folder will have the required details for database connection string and JWT Secret**  
